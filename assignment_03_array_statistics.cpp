@@ -42,3 +42,69 @@
 #include <iostream>
 using namespace std;
 
+int n_numbers;
+int sum(int n[100]){
+    int accumulate=0;
+
+    for (int i=0;i< n_numbers; i++){
+        accumulate += n[i];
+    }
+
+    return accumulate;
+}
+
+int max(int n[100]){
+    int largest=n[0];
+    for(int i=0; i < n_numbers; i++){
+        if(n[i]>largest){
+            largest=n[i];
+           
+        }
+        
+    }
+    return largest;
+}
+int min(int n[100]){
+    int smallest=n[0];
+    for(int i=0; i < n_numbers; i++){
+        if(n[i]<smallest){
+            smallest=n[i];
+           
+        }
+        
+    }
+    return smallest;
+}
+
+
+
+float average(int n){
+    return n/n_numbers;
+}
+
+
+int main(){
+
+    
+    cout<<"How many numbers? ";
+    cin>>n_numbers;
+
+   int numbers[100];
+
+    for(int i=0; i < n_numbers; i++){
+        cout << "Enter number "<<i+1<<": ";
+        cin>>numbers[i];
+        
+    }
+    
+    int store=sum(numbers);
+    cout<<"The sum is "<<sum(numbers)<<endl;
+    cout<<"The largest is "<<max(numbers)<<endl;
+    cout<<"The smallest number is "<<min(numbers)<<endl;
+    cout<<"The average number is "<<average(store);
+
+    
+
+    return 0;
+}
+
