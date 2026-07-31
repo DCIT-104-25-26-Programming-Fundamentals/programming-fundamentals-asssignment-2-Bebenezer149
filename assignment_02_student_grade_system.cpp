@@ -46,3 +46,33 @@
 #include <iostream>
 using namespace std;
 
+int main()
+{
+
+    int grade;
+
+    cout << "Enter your grade: ";
+
+    cin >> grade;
+
+    if(80<= grade && grade <= 100){
+        cout<<"Grade A";
+
+    }
+    else if(70<=grade && grade <= 79){
+        cout<<"Grade B";
+    }
+    else if(60 <= grade && grade <= 69){
+        cout<<"Grade C";
+
+    }
+    else if ( grade <= 50){
+        cout<<"Grade F";
+
+    }
+    else{
+        cout<<"Error: Score must be between 0-100";
+    }
+   
+    return 0;
+}
